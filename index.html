@@ -6,11 +6,35 @@
 		<title>Space X</title>
 		<link rel="stylesheet" type="text/css" href="mainstyle.css" />
 		<script src="mainscript.js"></script>
+		 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+    	google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Water', 9],
+          ['Vlees', 3],
+          ['Fruit', 4],
+          ['Groente', 4],
+        ]);
+
+        var options = {
+        	title: 'Voorraden',
+          pieHole: 0.5,
+          width: 300,
+          height: 150
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+      }
+    </script>
 	</head>
 	<header>Space X</header>
 	<body>
 		<div class="container">
-			<div class="box1">hoi</div>
+			<div class="box1" id="donutchart">hoi</div>
 			<div class="box2">hi</div>
 			<div class="box3">hi</div>
 			<div class="box4">hi</div>
