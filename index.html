@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>Space X</title>
 		<link rel="stylesheet" type="text/css" href="mainstyle.css" />
-		<script src="mainscript.js"></script>
+		<script src="mainscript.js"></script><!--weglaten? -->
 		 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
     	google.charts.load("current", {packages:["corechart"]});
@@ -23,7 +23,8 @@
         	title: 'Voorraden',
           pieHole: 0.5,
           width: 300,
-          height: 150
+          height: 150,
+          colors: ['#85E3FF', '#FFABAB', '#FFB5E8', '#93e9be']
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
