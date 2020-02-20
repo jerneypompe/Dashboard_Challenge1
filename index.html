@@ -13,18 +13,21 @@
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ['Task', 'Hours per Day'],
-          ['Water', 9],
-          ['Vlees', 3],
-          ['Fruit', 4],
-          ['Groente', 4],
+          ['Water', 900],
+          ['Vlees', 300],
+          ['Fruit', 500],
+          ['Groente', 400],
         ]);
 
         var options = {
         	title: 'Voorraden',
-          pieHole: 0.5,
-          width: 300,
-          height: 150,
-          colors: ['#85E3FF', '#FFABAB', '#FFB5E8', '#93e9be']
+        	pieHole: 0.5,
+          	width: 240,
+          	height: 150,
+          	colors: ['#85E3FF', '#FFABAB', '#FFB5E8', '#93e9be'],
+          	/*legend: {
+      			position: 'labeled'
+    			},*/
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
@@ -32,7 +35,7 @@
       }
     </script>
 	</head>
-	<header>Space X</header>
+	<header>SpaceX</header>
 	<body>
 		<div class="container">
 			<div class="box1" id="donutchart">hoi</div>
