@@ -8,8 +8,11 @@
 		<script src="mainscript.js"></script><!--weglaten? -->
 		 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
-    	google.charts.load("current", {packages:["corechart"]});
-      google.charts.setOnLoadCallback(drawChart);
+
+    google.charts.load("current", {packages:["corechart"]});
+    google.charts.setOnLoadCallback(drawChart);
+
+    /*inhoud van de grafiek*/
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ['Task', 'Hours per Day'],
@@ -19,6 +22,7 @@
           ['Groente', 400],
         ]);
 
+        /*opties voor de grafiek: groote, kleur */
         var options = {
         	title: 'Voorraden',
         	pieHole: 0.5,
@@ -30,6 +34,7 @@
     			},*/
         };
 
+        /*soort grafiek*/
         var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
         chart.draw(data, options);
       }
