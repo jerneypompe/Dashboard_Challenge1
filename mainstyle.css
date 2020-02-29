@@ -11,7 +11,44 @@ header{
 }
 body{
 	background-color: #F1F1F1;
+	font-family: 
 }
+.grid-container{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-row-gap: 4%;
+	grid-template-areas: 
+	"visualisatie1 visualisatie1"
+	"visualisatie2 visualisatie2"
+	"visualisatie3 visualisatie3"
+	"visualisatie4 visualisatie4"
+	"visualisatie5 visualisatie5"
+}
+.visualisatie1{
+	grid-area: visualisatie1;
+	display: flex; /*flex opties toevoegen*/
+}
+.visualisatie2{
+	grid-area: visualisatie2;
+}
+.visualisatie3{
+	grid-area: visualisatie3;
+}
+.visualisatie4{
+	grid-area: visualisatie4;
+}
+.visualisatie5{
+	grid-area: visualisatie5;
+}
+div.grid-item{
+	background-color: #FFFFFF;
+	border: solid black 1px;
+	border-radius: 25px;
+	padding: 1em; /*misschien veranderen*/
+}
+
+/*flexbox code ipv grid*/
+/*
 .container{
 	display: flex;
 	flex-direction: column;
@@ -25,3 +62,4 @@ body{
 }
 #donutchart{
 }
+*/

@@ -5,49 +5,22 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>Space X</title>
 		<link rel="stylesheet" type="text/css" href="mainstyle.css" />
-		<script src="mainscript.js"></script><!--weglaten? -->
-		 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-
-    google.charts.load("current", {packages:["corechart"]});
-    google.charts.setOnLoadCallback(drawChart);
-
-    /*inhoud van de grafiek*/
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Task', 'Hours per Day'],
-          ['Water', 900],
-          ['Vlees', 300],
-          ['Fruit', 500],
-          ['Groente', 400],
-        ]);
-
-        /*opties voor de grafiek: groote, kleur */
-        var options = {
-        	title: 'Voorraden',
-        	pieHole: 0.5,
-          	width: 240,
-          	height: 150,
-          	colors: ['#85E3FF', '#FFABAB', '#FFB5E8', '#93e9be'],
-          	/*legend: {
-      			position: 'labeled'
-    			},*/
-        };
-
-        /*soort grafiek*/
-        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
-        chart.draw(data, options);
-      }
-    </script>
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+		<script src="mainscript.js"></script>
 	</head>
 	<header>SpaceX</header>
 	<body>
-		<div class="container">
-			<div class="box1" id="donutchart">hoi</div>
-			<div class="box2">hi</div>
-			<div class="box3">hi</div>
-			<div class="box4">hi</div>
-			<div class="box5">hi</div>
+		<div class="grid-container">
+			<div class="grid-item visualisatie1" id="donutchart"></div>
+			<div class="grid-item visualisatie2">
+				<canvas id="dataChart1" width="150" height="100"></canvas>
+			</div>
+			<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js">
+			</script>
+			<script src="charts.js"></script>
+			<div class="grid-item visualisatie3">hi</div>
+			<div class="grid-item visualisatie4">hi</div>
+			<div class="grid-item visualisatie5">hi</div>
 		</div>
 	</body>
 </html>
