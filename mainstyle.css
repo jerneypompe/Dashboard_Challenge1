@@ -11,7 +11,7 @@ header{
 }
 body{
 	background-color: #F1F1F1;
-	font-family: 
+	font-family: Roboto;
 }
 .grid-container{
 	display: grid;
@@ -27,6 +27,8 @@ body{
 .visualisatie1{
 	grid-area: visualisatie1;
 	display: flex; /*flex opties toevoegen*/
+	justify-content: center;
+	margin-top: 5%;
 }
 .visualisatie2{
 	grid-area: visualisatie2;
@@ -39,10 +41,11 @@ body{
 }
 .visualisatie5{
 	grid-area: visualisatie5;
+	margin-bottom: 5%;
 }
 div.grid-item{
 	background-color: #FFFFFF;
-	border: solid black 1px;
+	border: solid black 0.4px;
 	border-radius: 25px;
 	padding: 1em; /*misschien veranderen*/
 }
@@ -59,7 +62,14 @@ div.grid-item{
 	border-radius: 25px;
 	margin: 4%;
 	padding: 1em;
-}
+}*/
 #donutchart{
+	width: 90%;
 }
-*/
+
+@media screen and (min-width: 500px){
+	#dataChart1{
+		max-width: 85%;
+		max-height: 450px;
+	}
+}

@@ -6,25 +6,54 @@ var dataChart1 = new Chart(ctx, {
     datasets: [
       {
         label: "Temperature outside °C", //title chart
-        fill: false,
+        fill: 'start',
         backgroundColor: 'pink',
         borderColor: 'lightblue',
         pointBorderColor: 'red',
         pointBackgroundColor: 'pink',
-        pointBorderWidth: 1.5,
+        pointBorderWidth: 1,
         pointHoverRadius: 5,
         pointHoverBackgroundColor: 'red',
         pointHoverBorderColor: 'black',
-        pointRadius: 3.5,
+        pointRadius: 2.5,
         pointHitRadius: 5,
         data: [-95, -118, -85, -55, -35, -41, -18, 0, 15, 32, 55, 50, 63, 38, 20, 12, -4, -26, -20, -30, -35, -53, -60, -78, -100],// the actual data buitentemperatuur
       },
       {
         label: "Temperature inside °C", //title chart
         data: [22, 20, 21, 20, 19, 19, 18, 19.5, 21, 22, 22.5, 21, 22, 22, 21.5, 21, 21, 20, 20, 19, 20, 19.5, 20, 19, 18],// the actual data binnentemperatuur
-        fill: true,
+        fill: 'orgin',
         backgroundColor: 'blue',
+        borderColor: 'blue',
+        pointRadius: 2,
       }
     ]
+  },
+  options: {
+    title: {
+      display: true,
+      text: 'Day Temperature',
+      fontSize: 18,
+      position: 'top',
+    },
+    legend: {
+      position: 'bottom',
+    },
+    scales: {
+      xAxes: [{
+        display: true,
+        scaleLabel: {
+          display: true,
+          labelString: 'Hours'
+        }
+      }],
+      yAxes: [{
+        display: true,
+        scaleLabel: {
+          display: true,
+          labelString: '°Celsius'
+        }
+    }]
   }
+}
 })
