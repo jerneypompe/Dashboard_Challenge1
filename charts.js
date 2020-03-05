@@ -232,7 +232,7 @@ var horizontalBar = new Chart(ctx, {
     }
   }
 });
-// Code van radarChart
+// Code van radarChart 
 var ctx = document.getElementById('radarChart');
 var radarChart = new Chart(ctx, {
   type: 'radar',

@@ -155,7 +155,7 @@ div.grid-item{
 	.visualisatie5{
 		width: 100%;
 	}
-/* Desktop big*/
+/* Desktop big */
 @media screen and (min-width: 1440px){
 	.grid-container{
 		justify-content: center;

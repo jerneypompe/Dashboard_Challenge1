@@ -1,4 +1,4 @@
-# Readme voor dashboard challenge 1
+# Readme voor dashboard challenge 1 
 Jerney Pompe - 18004369
 Vak: CMD-XT2 IxD & Technology 2
 Challenge 1: Dashboard SpaceX
