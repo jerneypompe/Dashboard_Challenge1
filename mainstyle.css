@@ -1,6 +1,7 @@
 /* Small screens */
 *{
 	box-sizing: border-box;
+	font-family: Roboto, Arial, sans-serif;
 }
 header{
 	background-color: #060052;
