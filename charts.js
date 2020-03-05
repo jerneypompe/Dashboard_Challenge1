@@ -6,7 +6,7 @@ var dataChart1 = new Chart(ctx, {
     labels: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24],
     datasets: [
       {
-        label: "Temperature outside °C", //title chart
+        label: "Temperature outside °C", //title van de chart
         fill: 'start',
         backgroundColor: 'pink',
         borderColor: 'lightblue',
@@ -21,7 +21,7 @@ var dataChart1 = new Chart(ctx, {
         data: [-95, -118, -85, -55, -35, -41, -18, 0, 15, 32, 55, 50, 63, 38, 20, 12, -4, -26, -20, -30, -35, -53, -60, -78, -100],// the actual data buitentemperatuur
       },
       {
-        label: "Temperature inside °C", //title chart
+        label: "Temperature inside °C", //title van de chart
         data: [22, 20, 21, 20, 20.1, 19, 20, 19.5, 21, 22, 22.5, 21, 22, 22, 21.5, 21, 21, 20, 20, 19, 20, 19.5, 20, 19, 19.5],// the actual data binnentemperatuur
         fill: 'orgin',
         backgroundColor: 'blue',
@@ -232,7 +232,7 @@ var horizontalBar = new Chart(ctx, {
     }
   }
 });
-// Code van radar-chart = visualisatie5
+// Code van radarChart
 var ctx = document.getElementById('radarChart');
 var radarChart = new Chart(ctx, {
   type: 'radar',
