@@ -31,11 +31,21 @@ var dataChart1 = new Chart(ctx, {
     ]
   },
   options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    layout: {
+      padding: {
+        bottom: 10,
+      }
+  },
     title: {
       display: true,
       text: 'Day Temperature',
       fontSize: 18,
       position: 'top',
+    },
+    animation: {
+      duration: 3500,
     },
     legend: {
       position: 'bottom',
@@ -61,7 +71,7 @@ var dataChart1 = new Chart(ctx, {
 // Code van dataChart2
 var ctx = document.getElementById('dataChart2');
 var dataChart2 = new Chart(ctx, {
-  type: 'bar', //horizontalBar grotere schermen
+  type: 'bar', 
   data: {
     labels: ['Exercise', 'Looking at View', 'Sleep', 'Eat', 'Watch TV', 'Contact Family'],
     datasets: [
@@ -82,6 +92,8 @@ var dataChart2 = new Chart(ctx, {
     ]
   },
   options: {
+    responsive: true,
+    maintainAspectRatio: false,
     title: {
       display: true,
       text: 'Average Activities',
@@ -111,6 +123,139 @@ var dataChart2 = new Chart(ctx, {
           fontColor: 'black',
         }
     }]
+    }
+  }
+});
+// Code van dougnutChart
+var ctx = document.getElementById('doughnutChart');
+var doughnutChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: ['Water', 'Vegetables', 'Fruit', 'Meat', 'Fish'],
+      datasets: [
+        {
+          label: "Pieces (thousands)",
+          backgroundColor: ["#85E3FF", "#93E9BE", "#FFB5E8", "#FFABAB", "#FFFCAB"],
+          data: [900,350,500,400,250],
+          hoverBorderColor: '#D0D0D0', 
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      cutoutPercentage: 30,
+      title: {
+        display: true,
+        text: 'Water and food reserve',
+        fontSize: 18,
+        position: 'top',
+      },
+      legend: {
+        display: true,
+        position: 'bottom',
+        labels: {
+          padding: 18,
+        }  
+      },
+      animation: {
+         animateScale: true,
+         animateRotate: true,
+         duration: 2500,
+        }
+    }
+});
+//Code van horizontalBar chart
+var ctx = document.getElementById('horizontalBar');
+var horizontalBar = new Chart(ctx, {
+  type: 'horizontalBar',
+  data: {
+    labels: ['Earth'],
+    datasets: [ 
+    {
+      label: "Traveled Distance",
+      backgroundColor: 'darkblue',
+      borderColor: 'black',
+      borderWidth: 1.5,
+      data: [35],
+    },
+    {
+    label: "Remaining Distance",
+    data: [15],
+    backgroundColor: 'orange',
+    borderColor: 'black',
+    borderWidth: 1.5,
+    }
+    ]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    title: {
+      display: true,
+      text: 'Distance to Mars',
+      fontSize: 18,
+      position: 'top',
+    },
+    animation: {
+      duration: 2000,
+      easing: 'easeInOutCirc',
+    },
+    legend: {
+      position: 'bottom',
+    },
+    scales: {
+      yAxes: [{
+        stacked: true,
+        scaleLabel: {
+          display: true,
+          labelString: 'Planet',
+          fontStyle: 'bold',
+          fontColor: 'black',
+        },
+      }],
+      xAxes: [{
+        stacked: true,
+        display: true,
+        scaleLabel: {
+          display: true,
+          labelString: 'Traveled Kilometers * 10.000',
+          fontStyle: 'bold',
+          fontColor: 'black',
+          fontSize: 10,
+        },
+        ticks: {
+          suggestedMin: 0,
+          suggestedMax: 50,
+        }
+      }]
+    }
+  }
+});
+// Code van radar-chart = visualisatie5
+var ctx = document.getElementById('radarChart');
+var radarChart = new Chart(ctx, {
+  type: 'radar',
+  data: {
+    labels: ['Mercury','Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus'],
+    datasets: [{
+      label: "Location",
+      fill: true,
+      backgroundColor: 'rgba(255, 172, 77, 0.7)',
+      borderColor: 'black',
+      pointBorderColor: '#fff',
+      pointBackgroundColor: 'purple',
+      data: [77, 41, 80, 100, 58, 120, 130],
+    }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    title:{
+      display: true,
+      text: 'Radar',
+      fontSize: 18,
+      position: 'top',
     }
   }
 });

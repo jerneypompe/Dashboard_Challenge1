@@ -6,31 +6,43 @@
 		<title>Space X</title>
 		<link rel="stylesheet" type="text/css" href="mainstyle.css" />
 		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-		<script src="mainscript.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+		<script src="charts.js"></script>
 	</head>
 	<header id="header">SpaceX</header>
 	<body>
 		<div class="grid-container">
-			<aside id="aside">hi</aside>
-			<div class="grid-item visualisatie1" id="donutchart"></div>
-			<div class="grid-item visualisatie2">
-				<canvas id="dataChart1" width="300" height="360"></canvas>
+			<aside id="aside"></aside>
+			<div class="grid-item visualisatie1">
+				<canvas id="doughnutChart" width="300" height="200"></canvas>
 			</div>
-			<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js">
-			</script>
-			<script src="charts.js"></script>
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+				<script src="charts.js"></script>
+			<div class="grid-item visualisatie2">
+				<canvas class="sizes" id="dataChart1" width="300" height="370"></canvas>
+			</div>
+				<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js">
+				</script>
+				<script src="charts.js"></script>
 			<div class="grid-item visualisatie3">
 				<canvas id="dataChart2" width="300" height="320"></canvas>
 			</div>
-			<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js">
-			</script>
-			<script src="charts.js"></script>
+				<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js">
+				</script>
+				<script src="charts.js"></script>
 			<div class="grid-item visualisatie4">
-				hi
+				<canvas class="sizes" id="horizontalBar" width="300" height="320"></canvas>
+				<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js">
+				</script>
+				<script src="charts.js"></script>
 			</div>
 			<div class="grid-item visualisatie5">
-				hi
+				<canvas id="radarChart" width="300" height="320"></canvas>
 			</div>
+			<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+			<script src="charts.js"></script>
+		<footer>Dashboard 2020</footer>
 		</div>
 	</body>
+
 </html>

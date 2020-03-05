@@ -1,8 +1,9 @@
+/* Small screens */
 *{
-	box-sizing: border-box
+	box-sizing: border-box;
 }
 header{
-	background-color: #060052; /*black*/
+	background-color: #060052;
 	color: #FFFFFF;
 	width: 100%;
 	height: 40px;
@@ -26,10 +27,15 @@ body{
 	"visualisatie3 visualisatie3"
 	"visualisatie4 visualisatie4"
 	"visualisatie5 visualisatie5"
+	"footer footer"
+}
+#donut-chart{
+	min-width: 200px;
+	min-height: 300px;
 }
 .visualisatie1{
 	grid-area: visualisatie1;
-	display: flex; /*flex opties toevoegen*/
+	display: flex; 
 	justify-content: center;
 	margin-top: 5%;
 }
@@ -47,94 +53,112 @@ body{
 	grid-area: visualisatie5;
 	margin-bottom: 5%;
 }
+footer{
+	grid-area: footer;
+	display: flex;
+	justify-content: center;
+	font-weight: bold;
+	font-family: Roboto, Arial;
+	background-color: black;
+	color: white;
+}
 div.grid-item{
 	background-color: #FFFFFF;
 	border: solid #AAAAAA 1px;
 	border-radius: 20px;
-	padding: 1em; /*misschien veranderen*/
+	padding: 1em;
 	display: flex;
 	justify-content: center;
 }
-
-/*flexbox code ipv grid*/
-/*
-.container{
-	display: flex;
-	flex-direction: column;
-}
-.box1, .box2, .box3, .box4, .box5{
-	background-color: #FFFFFF;
-	border: solid black 1px;
-	border-radius: 25px;
-	margin: 4%;
-	padding: 1em;
-}*//*
-#donutchart{
-	width: 90%;
-}*/
 #aside{
 	display: none;
 }
-
+/* Large screens*/
 @media screen and (min-width: 500px){
-	#dataChart1{
-		min-width: 50%;
-	}
 	#header{
-		/*display: none;*/
 		font-size: 25px;
 	}
 	header{
 		height: 60px;
-	}/*
-	#aside{
-		display: inherit;
-		background-color: #060052;
-		grid-area: aside;
-		min-width: 7em;
-	}*/
+	}
 	.grid-container{
 		display: grid;
 		grid-column-gap: 3%;
 		grid-row-gap: 2%;
-		grid-template-columns: 18em 1fr;
-		grid-template-rows: 28% 1fr 1fr;
+		grid-template-columns: 49% 49%;
 		grid-template-areas: 
 		"visualisatie1 visualisatie1"
 		"visualisatie2 visualisatie4"
 		"visualisatie3 visualisatie5"
+		"footer footer"
 	}
-	div.grid-item{
-
+	canvas.sizes{
+		max-height: 310px;
 	}
-	#donutchart{
-		
-	}
-}/*maybe volgorde veranderen*/
+}
+/* 'Tablet' screens*/
 @media screen and (min-width: 700px){
 	div.grid-item{
 		border: solid black 1px;
 	}
 	.grid-container{
 		grid-template-columns: 5em 40% 40%;
-		grid-template-rows: 35% 1fr 1fr;
+		grid-template-rows: 22em 18em 1fr 2%;
 		grid-template-areas: 
 		"aside visualisatie1 visualisatie2"
 		"aside visualisatie4 visualisatie3"
 		"aside visualisatie5 visualisatie5"
+		"aside footer footer"
 	}
 	#aside{
 		display: inherit;
 		background-color: #060052;
 		grid-area: aside;
+		background-image: url(backgroundstar.png);
 	}
 	.visualisatie2{
 		margin-top: 5%;
+	}
+	.visualisatie3{
+		margin-bottom: 0;
+	}
+	.visualisatie5{
+		width: 75%;
+		margin: auto;
 	}
 	header{
 		display: flex;
 		justify-content: center;
 		height: 50px;
 		padding-top: 1%;
+		background-color: #F1F1F1;
+		color: #060052;
+		border-bottom: solid #060052 3px;
+		margin-bottom: 1%;
+	}
+	footer{
+		color: black;
+		background-color: #F1F1F1;
+	}
+}
+/* Desktop small*/
+@media screen and (min-width: 1024px){
+	.grid-container{
+		grid-template-columns: 10em 38% 38%; 
+		grid-template-areas: 
+		"aside visualisatie1 visualisatie2"
+		"aside visualisatie4 visualisatie3"
+		"aside visualisatie5 ."
+		"aside footer footer"
+	}
+	.visualisatie5{
+		width: 100%;
+	}
+/* Desktop big*/
+@media screen and (min-width: 1440px){
+	.grid-container{
+		justify-content: center;
+		max-width: 90%;
+		grid-template-columns: 1fr 38% 38%; 
 	}
 }
